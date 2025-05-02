@@ -1,0 +1,246 @@
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Urbanist", sans-serif;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    width: 100%;
+    background-color: #eff3ff;
+  }
+  
+  h1 {
+    font-size: 5.4rem;
+    font-weight: bold;
+    color: #000 !important;
+    text-align: center;
+  }
+  
+  p,
+  span {
+    font-size: 1.6rem;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  span {
+    font-weight: bold;
+  }
+  
+  .container {
+    max-width: 152rem;
+    margin: auto;
+    padding: 1rem;
+  }
+  
+  .grid-three-cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+    text-align: center;
+    margin: 5rem 0;
+    align-items: end;
+  }
+  
+  header {
+    margin: 3.2rem 0;
+  }
+  
+  .pokemon-search {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-bottom: 3.2rem;
+  }
+  
+  .card-demo {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card-demo .pokemon-card {
+    min-height: 32rem;
+  }
+  
+  input[type="text"] {
+    appearance: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    max-width: 32rem;
+    border-bottom: 0.2em solid #020d35;
+    background: rgba(233, 30, 99, 0.2);
+    border-radius: 0.2em 0.2em 0 0;
+    padding: 0.8em;
+    font-size: 1.6rem;
+    color: #000000;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 3.2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pokemon-card {
+    width: 100%;
+    min-height: 30rem;
+    box-shadow: rgba(220, 5, 5, 0.05) 0px 6px 24px 0px,
+      rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    background-color: #7ec5b2;
+    border-radius: 0.4rem;
+    padding: 1.6rem;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .pokemon-card:hover {
+    transform: scale(1.03);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  }
+  
+  figure {
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(0px 50px 100px rgba(50, 50, 93, 0.25));
+  }
+  
+  .pokemon-image {
+    width: 65%;
+    height: 20rem;
+    object-fit: contain;
+  }
+  
+  .pokemon-highlight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.6rem 0;
+  }
+  
+  .fav-btn {
+    margin-top: 10px;
+    padding: 6px 12px;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #ffde59;
+    transition: background 0.3s;
+    align-self: center;
+  }
+  
+  .fav-btn:hover {
+    background-color: #ffd000;
+  }
+  
+  .favorite-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .pokemon-abilities,
+  .pokemon-moves {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .pokemon-abilities span,
+  .pokemon-moves span {
+    color: #ff595e;
+  }
+  
+  /* --------------------------- */
+  /*        MEDIA QUERIES       */
+  /* --------------------------- */
+  @media (max-width: 768px) {
+    html {
+      font-size: 55%;
+    }
+  
+    .grid-three-cols {
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+    }
+  
+    h1 {
+      font-size: 4rem;
+    }
+  
+    .pokemon-image {
+      width: 80%;
+      height: 18rem;
+    }
+  
+    input[type="text"] {
+      max-width: 28rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    html {
+      font-size: 50%;
+    }
+  
+    .pokemon-image {
+      width: 90%;
+      height: auto;
+    }
+  
+    .cards {
+      grid-template-columns: 1fr;
+    }
+  
+    .grid-three-cols {
+      margin: 2rem 0;
+    }
+  
+    h1 {
+      font-size: 3.2rem;
+    }
+  }
+
+  .fev {
+    text-align: center;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .page-button {
+    background-color: #eee;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .page-button:hover {
+    background-color: #ccc;
+  }
+  
+  .page-button.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
